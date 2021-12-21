@@ -16,12 +16,23 @@ new Zdog.Ellipse({
   color: "#636",
 });
 
+new Zdog.Rect({
+  addTo: illo,
+  width: 80,
+  height: 80,
+  // position further back
+  translate: { z: -40 },
+  stroke: 12,
+  color: "#E62",
+  fill: true,
+});
+
 // update & render
 // illo.updateRenderGraph();
 
 function animate() {
   // rotate illo each frame
-  illo.rotate.y += 0.03;
+  illo.rotate.y += 0.01;
   illo.updateRenderGraph();
   // animate next frame
   requestAnimationFrame(animate);
